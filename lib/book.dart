@@ -67,11 +67,12 @@ void updateBooks(Function(bool success) update) async {
 
 void searchBook(Function(List<Book>) update, String query) async {
   try {
-    // Encode the query to handle special characters
-    final encodedQuery = Uri.encodeComponent(query);
 
     // Construct the URL with the encoded query
-    final url = Uri.http(_baseURL, 'searchBooks.php', {'query': encodedQuery});
+    final url = Uri.http(_baseURL, 'searchBooks.php', {'query': query.trim()});
+
+    print('Full URL: $url');
+
 
     // Make the GET request
     final response = await http.get(url).timeout(const Duration(seconds: 30));
