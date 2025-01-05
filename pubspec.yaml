@@ -1,0 +1,32 @@
+name: Book
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  http: ^1.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: "^0.14.2"
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"  # Ensure this points to your .png image
+  remove_alpha_ios: true  # Optional: Removes alpha transparency for iOS icons
+
+flutter_lints: ^4.0.0
+
+flutter:
+  assets:
+    - assets/logo.png  # Make sure this points to your .png image
+  uses-material-design: true
